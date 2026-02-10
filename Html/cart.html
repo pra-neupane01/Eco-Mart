@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Cart - Eco Mart</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: hsla(0, 60%, 93%, 0.865);
+            color: #333;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+        .navbar {
+            display: flex;
+            background-color: #a3b18a;
+            height: 90px;
+            width: 100%;
+            align-items: center;
+            justify-content: flex-end;
+            gap: 15px;
+            padding: 0 20px;
+        }
+        .navbar a {
+            color: black;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .navbar a:hover {
+            transition: 0.3s ease-in-out;
+            transform: scale(1.15);
+            color: rgb(248, 4, 24);
+        }
+        .nav-links {
+            display: flex;
+            gap: 25px;
+            margin-right: 180px;
+        }
+        .logo {
+            position: absolute;
+            font-weight: bold;
+            left: 20px;
+            font-size: 30px;
+        }
+        .cart-container {
+            position: relative;
+            cursor: pointer;
+        }
+        #cart-count {
+            position: absolute;
+            top: -10px;
+            right: -10px;
+            background: red;
+            color: white;
+            border-radius: 50%;
+            padding: 2px 6px;
+            font-size: 12px;
+            font-weight: bold;
+        }
+        .cart-section {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 20px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+        .cart-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 0;
+            border-bottom: 1px solid #ddd;
+        }
+        .cart-item button {
+            background: #e53935;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .cart-item button:hover {
+            background: #c62828;
+        }
+        .empty-cart {
+            text-align: center;
+            color: #666;
+        }
+        .clear-cart {
+            background: #555;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+        .clear-cart:hover {
+            background: #333;
+        }
+    </style>
+</head>
+<body>
+    <!-- Simple Nav -->
+    <div class="navbar">
+        <div class="logo">Eco Mart</div>
+        <div class="nav-links">
+            <a href="Home.html">Home</a>
+            <a href="product.html">Back to Products</a>
+        </div>
+        <div class="cart-container">
+            <i class="fa-solid fa-cart-plus" aria-label="Shopping Cart"></i>
+            <span id="cart-count">0</span>
+        </div>
+    </div>
+
+    <div class="cart-section">
+        <h2>Your Cart</h2>
+        <div id="cart-items"></div>
+        <button class="clear-cart" id="clear-cart">Clear Cart</button>
+    </div>
+<script>
+    // Load cart data from localStorage
+    let cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+    let cartCount = parseInt(localStorage.getItem('cartCount')) || 0;
+    const cartCountElement = document.getElementById('cart-count');
+    const cartItemsContainer = document.getElementById('cart-items');
+    
+
+    // Update cart count display
+    cartCountElement.textContent = cartCount;
+
+    // Function to render cart items (now includes image)
+    
+    function renderCart() {
+        cartItemsContainer.innerHTML = '';
+        if (cartItems.length === 0) {
+            cartItemsContainer.innerHTML = '<p class="empty-cart">Your cart is empty.</p>';
+            return;
+        }
+        cartItems.forEach((item, index) => {
+            const itemDiv = document.createElement('div');
+            itemDiv.className = 'cart-item';
+            itemDiv.innerHTML = `
+                <div style="display: flex; align-items: center; gap: 10px;">
+                    <img src="${item.image}" alt="${item.name}" style="width: 50px; height: 50px; object-fit: cover; border-radius: 4px;">
+                    <div>
+                        <strong>${item.name}</strong> - ${item.price} x ${item.quantity}
+                    </div>
+                </div>
+                <button onclick="removeItem(${index})">Remove</button>
+            `;
+            cartItemsContainer.appendChild(itemDiv);
+        });
+    }
+
+    // Function to remove item
+    function removeItem(index) {
+        cartCount -= cartItems[index].quantity;
+        cartItems.splice(index, 1);
+        localStorage.setItem('cartItems', JSON.stringify(cartItems));
+        localStorage.setItem('cartCount', cartCount);
+        cartCountElement.textContent = cartCount;
+        renderCart();
+    }
+
+    // Clear cart
+    document.getElementById('clear-cart').addEventListener('click', () => {
+        cartItems = [];
+        cartCount = 0;
+        localStorage.removeItem('cartItems');
+        localStorage.removeItem('cartCount');
+        cartCountElement.textContent = cartCount;
+        renderCart();
+    });
+
+    // Initial render
+    renderCart();
+</script>
+</body>
+</html>

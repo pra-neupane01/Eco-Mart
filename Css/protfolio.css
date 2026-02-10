@@ -1,0 +1,141 @@
+*{
+    margin: 0%;
+    padding: 0%;
+
+}
+.navbar{
+    display: flex;
+    background-color: #a3b18a;
+    height: 90px;
+    width: 100%;
+    flex-direction: row;
+    align-items: center;
+    justify-content: end;
+    gap: 25px;
+    
+}
+a{
+    font-size: 20px;
+    text-decoration: none;
+    color: black;
+}
+a:hover{
+    transition: 0.3s ease-in-out;
+    transform:scale(1.15);
+    color: rgb(248, 4, 24);
+}
+
+.logo{
+    position: absolute;
+    font-size: large;
+    font-weight: bold;
+    left: 20px;
+    font-size: 30px;
+}
+.nav-links{
+    margin-right: 180px;
+    display: flex;
+    gap: 25px;
+}
+footer {
+    background-color: #2e4d2e;
+    height: 250px;
+    margin-top: 20px;
+}
+.footer-container{
+    display: flex;
+    justify-content: space-evenly;
+}
+footer a,h4,p,li,ul{
+    color: white;
+    list-style-type: none;
+}
+footer p{
+    font-size: 20px;
+}
+.footer-links h4{
+    margin-top: 15px;
+}
+.footer-links li{
+    margin-top: 7px;
+}
+.footer-contact  h4{
+    margin-top: 20px;
+
+}
+.footer-contact p{
+    margin-top: 20px;
+}
+.footer-end {
+    display: flex;
+    justify-content: end;
+    margin-right:20%;
+    padding-top: 35px;
+}
+.footer-media{
+    margin-top: 50px;
+    font-size: 20px;
+}
+.footer-media i{
+    margin-top:10px;
+    
+}
+i:hover::before{
+   transition: 0.4s ease;
+    color:  rgb(248, 4, 24);
+}
+.protfolio-container p{
+color: black;
+}
+.protfolio-container{
+    width: 800px;
+    margin: 40px auto;
+    background: #cdd7c7;
+    padding: 30px;
+    border-radius: 10px;
+}
+.protfolio-container img{
+    width: 200px;
+    height: 220px;
+    object-fit: cover;
+    display: block;
+    margin: auto;
+    border-radius: 8px;
+}
+.protfolio-container h2{
+    text-align: center;
+    margin-top: 15px;
+    color: #2f6b3c;
+}
+.protfolio-container h3{
+    margin-top: 20px;
+    color: #2f5d3e;
+}
+.protfolio-container ul,li{
+    color: black;
+}
+.back-btn{
+    display: 
+    inline-block;
+margin-top: 20px;
+background: 
+#69be5b;
+color: white;
+padding: 10px 20px;
+text-decoration: none;
+border-radius: 5px;
+}
+  #search-box{
+        width: 250px;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 25px;
+        outline: none;
+        font-size: 16px;
+    }  
+    #search-box:focus{
+        border-color: #031803;
+        box-shadow: 0 0 7px rgba(76, 175, 80, 0.5);
+        
+    }
+    

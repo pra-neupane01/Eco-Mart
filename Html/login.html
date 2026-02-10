@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Eco-Mart Login</title>
+  <link rel="stylesheet" href="../Css/Login.css">
+</head>
+<body>
+  
+  <div class="container">
+    <!--Left side for video-->
+    <div class="left">
+      <video autoplay muted loop class="bg-video">
+        <source src="../video/311788_small.mp4" type="video/mp4">
+      </video>
+     <div class="caption">
+      <h1>SAVE MONEY,SAVE NATURE</h1>
+      <h3>Eco Mart-Smart Shopping for a Greener Future</h3>
+     </div>
+    </div>
+<!--Right side login box-->
+<div class="right">
+  <div class="login-box">
+    <h1 class="brand-name">Eco Mart</h1>
+<h2 class="form-title">Sign In</h2>
+
+<form onsubmit="return validateform()">
+  <div class="input-group">
+    <label for="username">Username</label>
+    <input type="text" id="username" placeholder="Enter your username" >
+  </div>
+
+  <div class="input-group">
+    <label for="password">Password</label>
+    <input type="password" id="password" placeholder="Enter your password" >
+  </div>
+
+  <div class="options">
+    <label>
+      <input type="checkbox" id="rememberMe">Remember Me
+    </label>
+    <a href="#" class="forgot-link">Forget Password?</a>
+  </div>
+
+  <button type="submit" class="login-btn">LET'S GO</button>
+
+</form>
+<p class="register-text">Not yet Registered?</p>
+<a href="#" class="register-link">Create Account</a>
+  </div>
+</div>
+  </div>
+  <script>
+    function validateform(){
+      var username= document.getElementById('username').value;
+      var password= document.getElementById('password').value;
+      if(username && password){
+        alert("successfully Logged in.!")
+        return true;
+      }
+      else{
+        alert("Required fields incomplete..!")
+        return false;
+      }
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home page</title>
+    <!-- linking html with external css -->
+    <link rel="stylesheet" href="../Css/Home..css">
+    <!-- linking font awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    
+</head>
+<!-- styling html with internal css  -->
+<style>
+
+    #search-box{
+        width: 250px;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 25px;
+        outline: none;
+        font-size: 16px;
+    }  
+    #search-box:focus{
+        border-color: #031803;
+        box-shadow: 0 0 7px rgba(76, 175, 80, 0.5);
+        
+    }
+    .footer-end {
+    display: flex;
+    justify-content: end;
+    margin-right:20%;
+    padding-top: 50px;
+}
+.footer-media{
+    margin-top: 50px;
+    font-size: 15px;
+
+}
+.footer-media i{
+    margin-top:10px;
+    
+}
+i:hover::before{
+   transition: 0.4s ease;
+    color:  rgb(248, 4, 24);
+    
+}
+
+      
+</style>
+<!-- main part of the code  -->
+<body>
+    <!-- heading part of the code #navigation bar -->
+     <section>
+    <header>
+        <nav>
+        <div class="navbar">
+       <div class="logo">Eco Mart
+        <i class="fa-solid fa-leaf"></i>
+       </div>   
+       <div class="nav-links"> 
+<a href="Home.html">Home</a>
+<a href="product.html">Products</a>
+<a href="Blog.html">Blog</a>
+<a href="Research.html">Research</a>
+<a href="Aboutus.html">About us</a>
+</div> 
+
+ <input type="text" id="search-box" placeholder="search items" >
+<a href="login.html"><i class="fa-solid fa-user-plus"style="font-size: 30px;"></i></a>
+ <i class="fa-solid fa-cart-plus" style="font-size: 30px;"></i>
+        </div>
+        </nav>
+    </header>
+</section>
+<section class="hero">
+    <div class="hero-content">
+        <h1 style="color: white;">Welcome to Eco Mart</h1>
+        <p>your sustainable choice for greener tomorrow</p>
+        <a href="totebag.html"><button >Shop Now</button></a>
+    </div>
+</section>
+<section class="why">
+    <h2>Why choose eco mart?</h2>
+    <p >Shop a wide range of sustainable, environmentally safe products.</p>
+    <div class="cards">
+        <div class="card">
+            <h3>Eco-friendly products</h3>
+            <p>Sustainable and safe products for daily use.</p>
+        </div>
+        <div class="card">
+            <h3>Educational content</h3>
+            <p>Learn about green living and eco-technology.</p>
+        </div>
+        <div class="card">
+            <h3>Organic</h3>
+            <p>Organic products available.</p>
+        </div>
+    </div>
+</section>
+<section class="products" style="padding: 40px; background: #e5f3e2;text-align: center;">
+    <h2>Featured Eco-friendly products</h2>
+    <div class="product-grid">
+        <div class="product">
+            <img src="/photos/home photos/food and  bevrage.webp" alt="food"style="height: 300px;">
+            <h4>Food and Bevrage</h4>
+             
+            
+        </div>
+        <div class="product">
+            <img src="/photos/home photos/fashion.jpg" alt="fashion"style="height: 300px;">
+            <h4>Fashion and Accessories</h4>
+        
+        </div>
+        <div class="product">
+            <img src="/photos/home photos/kids.jpg" alt="baby"style="height: 300px;">
+            <h4>kids and baby</h4>
+        
+        </div>
+        <div class="product">
+            <img src="/photos/home photos/household.jpg" alt="house"style="height: 300px;">
+            <h4>Household and Kitchens</h4>
+        
+        </div>
+        <div class="product">
+            <img src="/photos/home photos/personal care.jpg" alt="care"style="height: 300px;">
+            <h4>Organic makeup set</h4>
+            <p class="price"> price $60</p>
+        </div>
+        <div class="product">
+            <img src="/photos/home photos/tooth brushes.jpg" alt="brush"style="height: 300px;">
+            <h4>Bamboo brush</h4>
+            <p class="price"> price $55</p>
+        </div>
+        <div class="product">
+            <img src="/photos/home photos/plant based snacks.jpg" alt="snacks" style="height: 300px;">
+            <h4>plant-based snacks</h4>
+            <p class="price"> price $35</p>
+        </div>
+        <div class="product">
+            <img src="/photos/home photos/aesthetic-earrings.avif" alt="earring" style="height: 300px;">
+            <h4>upcycled earrings</h4>
+            <p class="price"> price $15</p>
+        </div>
+    </div>
+    <a href="product.html" ><button class="center-btn">View All products</button></a>
+</section>
+<section class="living-tips">
+    <div class="tips">
+        <h3>Sustainable living tips</h3>
+        <ul>
+            <li>Reduce waste</li>
+            <li>Save Energy</li>
+            <li>Eco-friendly transport</li>
+        </ul>
+    </div>
+    <div class="tips">
+        <h3>Eco-living and Awareness Blog</h3>
+        <p>
+            <strong>Understanding sustainable living:</strong>
+            Sustainable living focuses on reducing waste and protrcting the environment.
+        </p>
+        <p>
+            <strong>positive impact of technology:</strong>
+            Technology supports renewable energy and eco-friendly solutions.
+        </p>
+    </div>
+</section>
+<div>
+        <p class="eco-text">
+            At Eco-mart, We believe every choice matters. Together, We build a greener tomorrow by offering sustainable products and inspiring eco-friendly living..........
+        </p>
+</div>
+    <!-- footer part of the code -->
+    <footer>
+        <div class="footer-container">
+             <div class="footer-media">
+                <h4 style="margin-left: 10px;">Social Media</h4>
+                 <i class="fa-brands fa-twitter" style="font-size: 25px; color: white;" ></i>
+                 <i class="fa-brands fa-instagram" style="font-size: 25px; color: white;"></i>
+                 <i class="fa-brands fa-facebook" style="font-size: 25px; color: white;"></i>
+             </div>
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <uL>
+                  <li><a href="Home.html">Home</a></li>
+                 <li><a href="product.html">Products</a></li>
+                 <li><a href="Blog.html">Blog</a></li>
+                  <li><a href="Research.html">Research</a></li>
+                   <li><a href="Aboutus.html">About us</a></li>
+                </uL>
+            </div>
+            <div class="footer-contact">
+                <h4>Contact Info</h4>
+                <p>Address: Itahari,sunsari</p>
+                <p>contact no:0984736537</p>
+                <p>Gmail:ecomart45@gmail.com</p>
+            </div>
+        </div>
+         <div class="footer-end">
+                <p>&copy; 2026 | Eco Mart.| All rights reserved.| Designed with  sustainability in mind.|</p>
+            </div>
+    </footer>
+   
+</body>
+</html>

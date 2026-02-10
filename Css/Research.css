@@ -1,0 +1,148 @@
+*{
+    padding: 0;
+    margin: 0;
+    color: black;
+}
+.navbar{
+    display: flex;
+    background-color: #a3b18a;
+    height: 90px;
+    width: 100%;
+    flex-direction: row;
+    align-items: center;
+    justify-content: end;
+    gap: 25px;
+}
+a{
+    font-size: 20px;
+    text-decoration: none;
+}
+a:hover{
+    transition: 0.3s ease-in-out;
+    transform: scale(1.15);
+    color: rgb(248, 4, 24);
+}
+
+.logo{
+    position: absolute;
+    font-size: large;
+    font-weight: bold;
+    left: 20px;
+    font-size: 30px;
+}
+
+/*--TITLE--*/
+.title{
+    padding: 30px;
+    background-color: #e6e6e0;
+    height: 190px;
+}
+li:hover{
+    color: #4d7a05;
+    cursor: pointer;
+}
+
+
+
+/*--TABLE--*/
+.comparision-table{
+    width: 90%;
+    margin: 40px auto;
+    border-collapse: collapse;
+    background-color: rgb(236, 218, 218);
+    height: 500px;
+   
+}
+
+.cpmparision-table th,
+.comparision-table td{
+    border: 2px solid #a9c99b;
+    width: 50%;
+    padding: 15px;
+    text-align: center;
+    vertical-align: top;
+}
+
+/**---IMAGE CELLS---**/
+.image-cell{
+text-align: center;
+  height:auto;
+}
+
+/***---IMAGE FIX (NO CROPPING)---***/
+.image-cell img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain; 
+    background-color: white;
+    border-radius: 8px;
+    border: 2px solid #ccc;
+}
+
+ol{
+    padding-left: 20px;
+    text-align: left;
+}
+
+/***---Footer---***/
+footer {
+    background-color: #2e4d2e;
+    height: 250px;
+    margin-top: 20px;
+}
+.footer-container{
+    display: flex;
+    justify-content: space-evenly;
+}
+footer a,h4,p,li,ul{
+    color: white;
+    list-style-type: none;
+}
+footer p{
+    font-size: 15px;
+}
+.footer-links h4{
+    margin-top: 15px;
+}
+.footer-links li{
+    margin-top: 7px;
+    
+}
+li a{
+    font-size: 15px;
+}
+.footer-contact  h4{
+    margin-top: 20px;
+
+}
+.footer-contact p{
+    margin-top: 20px;
+}
+
+.footer-end {
+    display: flex;
+    justify-content: end;
+    margin-right:20%;
+    padding-top: 50px;
+}
+.footer-media{
+    margin-top: 50px;
+    font-size: 15px;
+
+}
+.footer-media i{
+    margin-top:10px;
+    
+}
+:hover::before{
+   transition: 0.4s ease;
+    color:  rgb(248, 4, 24);
+    
+}
+
+.nav-links{
+    margin-right: 100px;
+    display: flex;
+    gap: 25px;
+}
+ 
